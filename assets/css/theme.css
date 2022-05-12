@@ -2398,4 +2398,67 @@ a.fg-light:hover, a.fg-light:focus {
 .owl-carousel button.owl-dot.active {
   background-color: #2F89FC;
 }
+
+/*=====gallery Images=========*/
+
+.gallery-images-section {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(200px, 1fr));
+	grid-gap: 0;
+	width: 100%;
+	box-sizing: border-box;
+	box-sizing: content-box;
+	overflow: hidden;
+}
+
+.gallery-section2 .gallery-images-section {
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.gallery-img-wrap {
+	height: 200px;
+	width: 341px;
+	box-sizing: content-box;
+	overflow: hidden;
+}
+
+.gallery-section2 .gallery-img-wrap {
+	width: 337px;
+}
+
+.gallery-img-wrap a img {
+    -webkit-filter: brightness(100%);
+}
+
+.gallery-img-wrap a img:hover {
+    -webkit-filter: brightness(40%);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+/*=====gallery Images=========*/
+
+/*=========Popular Courses================*/
+
+.page-heading .container {
+	text-align: center;
+	/*padding-top: 6em;*/
+	/*padding-bottom: 4.687em;*/
+	padding-top: 6.25em;
+	padding-bottom: 4.375em;
+}
+
+.page-heading .container h2 {
+	/*font-size: 3rem;*/
+	/*font-family: "Raleway", sans-serif;*/
+	font-weight: bold;
+	text-transform: uppercase;
+	/*color: #000;*/
+}
+
+
+/*======Event UPcomming========*/
 /*# sourceMappingURL=theme.css.map */
