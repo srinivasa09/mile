@@ -1731,12 +1731,12 @@ a.fg-light:hover, a.fg-light:focus {
 .page-section {
   position: relative;
   display: block;
-  padding: 80px 0;
 }
 
 .page-section p {
   color: #6D728B;
 }
+
 
 .subhead {
   display: block;
@@ -2295,6 +2295,7 @@ a.fg-light:hover, a.fg-light:focus {
   padding-bottom: 20px;
   background-color: #33374B;
   color: #fff;
+   margin-top: 50px;
 }
 
 .page-footer hr {
