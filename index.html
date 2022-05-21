@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="assets/vendor/fancybox/css/jquery.fancybox.css">
 
   <link rel="stylesheet" href="assets/css/theme.css">
+  
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
 
 </head>
 <body>
@@ -215,7 +217,32 @@
       </div> <!-- .container -->
     </div> <!-- .page-section -->
 
-    
+         <div class="page-section">
+      <div class="container">
+      
+        <section class="page-heading">
+			<div class="container">
+				<h2>Life at MiracleMile</h2>
+			</div>
+		</section>
+		
+		                                        <!-- Video Preview -->
+                    <div class="image-container">
+                        <div class="video-wrapper">
+                            <a class="popup-youtube" href="https://www.youtube.com/watch?v=vmoCLeIJbw4" data-effect="fadeIn">
+                                <img class="img-fluid" src="assets\video\video.jpg" alt="alternative"  height="20%">
+                                <span class="video-play-button">
+                                    <span></span>
+                                </span>
+                            </a>
+                        </div> <!-- end of video-wrapper -->
+                    </div> <!-- end of image-container -->
+                    <!-- end of video preview -->
+                    
+                        <!-- Video -->
+
+      </div>
+    </div> <!-- .page-section -->
 
 
     <div class="page-section">
@@ -293,8 +320,6 @@
       </div> <!-- .container-fluid -->
     </div> <!-- .page-section -->
 
-
-
   </main>
 
   <footer class="page-footer">
@@ -360,6 +385,49 @@
 <script src="assets/js/google-maps.js"></script>
 
 <script src="assets/js/theme.js"></script>
+
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+
+    
+    
+    /* Video Lightbox - Magnific Popup */
+    $('.popup-youtube, .popup-vimeo').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false,
+        iframe: {
+            patterns: {
+                youtube: {
+                    index: 'youtube.com/', 
+                    id: function(url) {        
+                        var m = url.match(/[\\?\\&]v=([^\\?\\&]+)/);
+                        if ( !m || !m[1] ) return null;
+                        return m[1];
+                    },
+                    src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+                },
+                vimeo: {
+                    index: 'vimeo.com/', 
+                    id: function(url) {        
+                        var m = url.match(/(https?:\/\/)?(www.)?(player.)?vimeo.com\/([a-z]*\/)*([0-9]{6,11})[?]?.*/);
+                        if ( !m || !m[5] ) return null;
+                        return m[5];
+                    },
+                    src: 'https://player.vimeo.com/video/%id%?autoplay=1'
+                }
+            }
+        }
+    });
+});
+
+</script>
 
 <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script> -->
 
